@@ -1,0 +1,22 @@
+{
+  "name": "celo-fleek-starter-kit",
+  "version": "1.0.0",
+  "description": "Celo + Fleek template",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspace @celo-fleek-starter-kit/hardhat deploy && yarn workspace @celo-fleek-starter-kit/react-app build",
+    "build-local": "yarn workspace @celo-fleek-starter-kit/hardhat deploy-local && yarn workspace @celo-fleek-starter-kit/react-app build",
+    "react-app:dev": "yarn workspace @celo-fleek-starter-kit/react-app dev",
+    "react-app:build": "yarn workspace @celo-fleek-starter-kit/react-app build",
+    "react-app:start": "yarn workspace @celo-fleek-starter-kit/react-app start",
+    "react-app:lint": "yarn workspace @celo-fleek-starter-kit/react-app lint",
+    "hardhat:test": "yarn workspace @celo-fleek-starter-kit/hardhat test",
+    "hardhat:test-local": "yarn workspace @celo-fleek-starter-kit/hardhat test-local",
+    "hardhat:deploy": "yarn workspace @celo-fleek-starter-kit/hardhat deploy",
+    "hardhat:deploy-local": "yarn workspace @celo-fleek-starter-kit/hardhat deploy-local"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
