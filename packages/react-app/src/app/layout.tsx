@@ -1,11 +1,12 @@
-import type { AppProps } from "next/app";
+'use client'
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import celoGroups from "@celo/rainbowkit-celo/lists";
 import { Alfajores, Celo } from "@celo/rainbowkit-celo/chains";
 import Layout from "../components/Layout";
-import "../styles/globals.css";
+import './globals.css';
+
 import "@rainbow-me/rainbowkit/styles.css";
 
 const projectId = "celo-composer-project-id" // get one at https://cloud.walletconnect.com/app
@@ -14,8 +15,8 @@ const { chains, publicClient } = configureChains(
   [Alfajores, Celo],
   [jsonRpcProvider({ rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }) })]
 );
-  
-const connectors = celoGroups({chains, projectId, appName: typeof document === "object" && document.title || "Your App Name"})
+
+const connectors = celoGroups({ chains, projectId, appName: typeof document === "object" && document.title || "Your App Name" })
 
 const wagmiConfig = createConfig({
   autoConnect: true,
@@ -23,16 +24,23 @@ const wagmiConfig = createConfig({
   publicClient: publicClient,
 });
 
-function App({ Component, pageProps }: AppProps) {
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} coolMode={true}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <html lang="en">
+      <body>
+        <WagmiConfig config={wagmiConfig}>
+          <RainbowKitProvider chains={chains} coolMode={true}>
+            <Layout>
+              {children}
+            </Layout>
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </body>
+    </html>
   )
-}
+};
 
-export default App;

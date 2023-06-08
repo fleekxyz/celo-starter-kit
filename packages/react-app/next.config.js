@@ -13,7 +13,8 @@ const nextConfig = {
       fs: false
     }
     return config
-  }
+  },
+  assetPrefix: './'
 }
 
 module.exports = nextConfig

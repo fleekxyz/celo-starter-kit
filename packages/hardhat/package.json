@@ -6,8 +6,8 @@
         "test": "hardhat test",
         "test-local": "hardhat test --network hardhat",
 
-        "deploy": "hardhat deploy --network alfajores --export ../react-app/contracts/contracts.json",
-        "deploy-local": "hardhat deploy --network hardhat --export ../react-app/contracts/contracts.json"
+        "deploy": "hardhat deploy --network alfajores --export ../react-app/src/app/contracts/contracts.json",
+        "deploy-local": "hardhat deploy --network hardhat --export ../react-app/src/app/contracts/contracts.json"
     },
     "devDependencies": {
         "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
