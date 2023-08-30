@@ -1,6 +1,6 @@
 # Celo + Fleek Starter Kit
 
-![preview](./.github/preview.png)
+![image](https://github.com/fleekxyz/celo-starter-kit/assets/73345016/83bbe108-d25a-48bd-9cdc-bffe634fcbc1)
 
 ## 🚀 Project Structure
 
