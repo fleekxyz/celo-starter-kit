@@ -4,7 +4,7 @@
 
 ## 🚀 Project Structure
 
-This project is composed of two packages, here is an overview of the folders and files:
+This project is composed of two packages here is an overview of the folders and files:
 
 ```
 /
