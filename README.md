@@ -20,7 +20,7 @@ This project is composed of two packages, here is an overview of the folders and
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project from a terminal:
 
 | Command                | Action                                           |
 | :--------------------- | :----------------------------------------------- |
